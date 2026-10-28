@@ -1,0 +1,96 @@
+# Adapted from breadkit-parts/parts/raspberry_pi_pico_w.yml (MIT).
+# https://github.com/breadkit/breadkit-parts
+# yaml-language-server: $schema=https://breadkit.github.io/breadkit/schema/part-v1.json
+# Pico 2 W uses this same 40-pin header map.
+# USB connector up: pin 1 is top left and pin 40 is top right.
+# The 7-hole pin-row separation is 17.78 mm on a 2.54 mm grid.
+id: pico_2_w
+aliases: [raspberry_pi_pico_2_w]
+datasheet_url: https://datasheets.raspberrypi.com/picow/pico-2-w-pinout.pdf
+category: module
+placement: footprint
+straddle: true
+pins:
+  - {num: 1, name: GP0, type: gpio, max_voltage: 3.3, output_capable: true, label: true}
+  - {num: 2, name: GP1, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 3, name: GND1, type: ground, aliases: [GND]}
+  - {num: 4, name: GP2, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 5, name: GP3, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 6, name: GP4, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 7, name: GP5, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 8, name: GND2, type: ground}
+  - {num: 9, name: GP6, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 10, name: GP7, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 11, name: GP8, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 12, name: GP9, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 13, name: GND3, type: ground}
+  - {num: 14, name: GP10, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 15, name: GP11, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 16, name: GP12, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 17, name: GP13, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 18, name: GND4, type: ground}
+  - {num: 19, name: GP14, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 20, name: GP15, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 21, name: GP16, type: gpio, max_voltage: 3.3, output_capable: true, label: true}
+  - {num: 22, name: GP17, type: gpio, max_voltage: 3.3, output_capable: true, label: true}
+  - {num: 23, name: GND5, type: ground}
+  - {num: 24, name: GP18, type: gpio, max_voltage: 3.3, output_capable: true, label: true}
+  - {num: 25, name: GP19, type: gpio, max_voltage: 3.3, output_capable: true, label: true}
+  - {num: 26, name: GP20, type: gpio, max_voltage: 3.3, output_capable: true, label: true}
+  - {num: 27, name: GP21, type: gpio, max_voltage: 3.3, output_capable: true, label: true}
+  - {num: 28, name: GND6, type: ground}
+  - {num: 29, name: GP22, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 30, name: RUN, type: reset}
+  - {num: 31, name: GP26, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 32, name: GP27, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 33, name: AGND, type: ground}
+  - {num: 34, name: GP28, type: gpio, max_voltage: 3.3, output_capable: true}
+  - {num: 35, name: ADC_VREF, type: analog}
+  - {num: 36, name: 3V3_OUT, type: power, aliases: [3V3], label: 3V3}
+  - {num: 37, name: 3V3_EN, type: input, label: EN}
+  - {num: 38, name: GND7, type: ground, label: GND}
+  - {num: 39, name: VSYS, type: power, label: true}
+  - {num: 40, name: VBUS, type: power, label: true}
+internal: [[GND1, GND2], [GND2, GND3], [GND3, GND4], [GND4, GND5], [GND5, GND6], [GND6, AGND], [AGND, GND7]]
+footprint:
+  "1": [0, 0]
+  "2": [1, 0]
+  "3": [2, 0]
+  "4": [3, 0]
+  "5": [4, 0]
+  "6": [5, 0]
+  "7": [6, 0]
+  "8": [7, 0]
+  "9": [8, 0]
+  "10": [9, 0]
+  "11": [10, 0]
+  "12": [11, 0]
+  "13": [12, 0]
+  "14": [13, 0]
+  "15": [14, 0]
+  "16": [15, 0]
+  "17": [16, 0]
+  "18": [17, 0]
+  "19": [18, 0]
+  "20": [19, 0]
+  "21": [19, 7]
+  "22": [18, 7]
+  "23": [17, 7]
+  "24": [16, 7]
+  "25": [15, 7]
+  "26": [14, 7]
+  "27": [13, 7]
+  "28": [12, 7]
+  "29": [11, 7]
+  "30": [10, 7]
+  "31": [9, 7]
+  "32": [8, 7]
+  "33": [7, 7]
+  "34": [6, 7]
+  "35": [5, 7]
+  "36": [4, 7]
+  "37": [3, 7]
+  "38": [2, 7]
+  "39": [1, 7]
+  "40": [0, 7]
+render: {shape: module, label: Pico 2 W, size_mm: [51, 21], fill: "#2C2C2A", stroke: "#171715", text_color: "#FFFFFF"}

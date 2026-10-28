@@ -1,0 +1,13 @@
+# Generic CS-less breakout. Match signal names, not this assumed terminal order.
+id: st7789_240x240
+category: module
+placement: offboard
+pins:
+  - {num: 1, name: GND, type: ground}
+  - {num: 2, name: VCC, type: power, max_voltage: 3.3}
+  - {num: 3, name: SCL, type: clock, max_voltage: 3.3}
+  - {num: 4, name: SDA, type: data, max_voltage: 3.3}
+  - {num: 5, name: RES, type: reset, max_voltage: 3.3}
+  - {num: 6, name: DC, type: input, max_voltage: 3.3}
+  - {num: 7, name: BLK, type: input}
+render: {shape: offboard, label: ST7789}
